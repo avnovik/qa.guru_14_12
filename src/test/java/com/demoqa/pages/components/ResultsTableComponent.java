@@ -27,11 +27,6 @@ public class ResultsTableComponent {
         resultsTable.$(byText(key)).parent().shouldHave(text(value));
 
     }
-
-    public void checkCloseModal() {
-        closeModalWindowButton.click();
-        modalWindow.should(disappear);
-    }
 }
 
 

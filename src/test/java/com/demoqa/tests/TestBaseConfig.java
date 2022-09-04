@@ -13,6 +13,8 @@ public class TestBaseConfig {
     static void configure() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
+        System.getProperty("browser_name", "chrome");
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
 //        capabilities.setCapability("browserName", "chrome");
 //        capabilities.setCapability("browserVersion", "100.0");
