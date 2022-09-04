@@ -3,6 +3,10 @@ plugins {
     id "io.qameta.allure" version "2.10.0"
 }
 
+repositories {
+    mavenCentral()
+}
+
 allure {
     report {
         version.set("2.19.0")
@@ -15,10 +19,6 @@ allure {
             }
         }
     }
-}
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
@@ -36,6 +36,7 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 
     testLogging {
         lifecycle {
