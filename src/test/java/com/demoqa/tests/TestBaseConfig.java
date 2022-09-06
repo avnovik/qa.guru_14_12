@@ -13,7 +13,9 @@ public class TestBaseConfig {
     static void configure() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        System.getProperty("browser_name", "chrome");
+        Configuration.browser = System.getProperty("browser_name", "opera");
+//        String version = System.getProperty("browser_version", "101");
+//        String windowSize = System.getProperty("browser_window_size", "1200x800");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 //        capabilities.setCapability("browserName", "chrome");

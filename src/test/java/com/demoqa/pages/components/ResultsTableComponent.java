@@ -12,8 +12,7 @@ public class ResultsTableComponent {
     SelenideElement
             modalWindow = $(".modal-dialog"),
             modalTitle = $("#example-modal-sizes-title-lg"),
-            resultsTable = $(".table-responsive table"),
-            closeModalWindowButton = $("#closeLargeModal");
+            resultsTable = $(".table-responsive table");
 
     private final static String TITLE_TEXT = "Thanks for submitting the form";
 
